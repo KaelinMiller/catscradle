@@ -106,14 +106,14 @@ public class Vector2D {
      * components (x, y) are as follows:
      * 
      *   x  = u_x * cos( psi ) - u_y * sin( psi ) 
-     *   y  = u_x * sin( psi ) - u_y * cos( psi )
+     *   y  = u_x * sin( psi ) + u_y * cos( psi )
      * 
      * @param angle is the amount of rotation.
      * @return is a rotated version of this vector.
      */
     public Vector2D rotate( double angle ) {
         double xCoord = this.x * Math.cos(angle) - this.y * Math.sin(angle);
-        double yCoord = this.x * Math.sin(angle) - this.y * Math.cos(angle);
+        double yCoord = this.x * Math.sin(angle) + this.y * Math.cos(angle);
         return new Vector2D( xCoord, yCoord );
     } // rotate( double )
     
